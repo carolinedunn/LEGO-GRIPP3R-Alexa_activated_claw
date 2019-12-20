@@ -1,0 +1,208 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "lego mindstorms",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "MoveIntent",
+                    "slots": [
+                        {
+                            "name": "Direction",
+                            "type": "DirectionType"
+                        },
+                        {
+                            "name": "Duration",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "Degrees",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "turn {Direction} at {Degrees} degrees",
+                        "{Direction} turn at {Degrees} degrees",
+                        "turn {Direction} {Degrees} degrees",
+                        "turn {Direction} for {Degrees} degrees",
+                        "{Direction} now",
+                        "{Direction} {Duration} seconds",
+                        "move {Direction} for {Duration} seconds"
+                    ]
+                },
+                {
+                    "name": "SetSpeedIntent",
+                    "slots": [
+                        {
+                            "name": "Speed",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "set speed {Speed} percent",
+                        "set {Speed} percent speed",
+                        "set speed to {Speed} percent"
+                    ]
+                },
+                {
+                    "name": "SetCommandIntent",
+                    "slots": [
+                        {
+                            "name": "Command",
+                            "type": "CommandType"
+                        }
+                    ],
+                    "samples": [
+                        "fetch my {Command}",
+                        "bring me my {Command}",
+                        "please bring my {Command}",
+                        "please fetch my {Command}",
+                        "claw {Command}",
+                        "activate {Command} mode",
+                        "move in a {Command}",
+                        "activate {Command}"
+                    ]
+                },
+                {
+                    "name": "thankU",
+                    "slots": [],
+                    "samples": [
+                        "thanks",
+                        "thank you"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "DirectionType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "turn around"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "brake"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "go backward"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "go forward"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "go right"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "go left"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "right"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "left"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "backwards"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "backward"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "forwards"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "forward"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CommandType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "wine",
+                                "synonyms": [
+                                    "beer"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "water"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "claw close",
+                                "synonyms": [
+                                    "close"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "claw open",
+                                "synonyms": [
+                                    "open"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "circle"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "square"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "patrol"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
